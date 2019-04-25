@@ -49,7 +49,6 @@ namespace MVCgame.Models
             List<Game> games = new List<Game>()
             {
 
-
                 new Game{GameID = 1, Name = "The Escapists 2", ReleaseDate = 11, ReleaseMonth = "January",
                     Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.Name == "Nintendo Switch")},
                 new Game{GameID = 2, Name = "Shadow of the Colossus", ReleaseDate = 6, ReleaseMonth = "February",
