@@ -13,14 +13,14 @@ namespace MVCgame.Models
         public List<Genre> GetGenres()
         {
             var genres  = new List<Genre> { 
-            new Genre() {GenreID = 1, Name = "Strategy"},
-            new Genre() {GenreID = 2, Name = "Adventure"},
-            new Genre() {GenreID = 3, Name = "Action"},
-            new Genre() {GenreID = 4, Name = "Role-Playing"},
-            new Genre() {GenreID = 5, Name = "Simulation"},
-            new Genre() {GenreID = 6, Name = "Sports"},
-            new Genre() {GenreID = 7, Name = "Racing"},
-            new Genre() {GenreID = 8, Name = "First-person shooter"},
+            new Genre {GenreID = 1, Name = "Strategy"},
+            new Genre {GenreID = 2, Name = "Adventure"},
+            new Genre {GenreID = 3, Name = "Action"},
+            new Genre {GenreID = 4, Name = "Role-Playing"},
+            new Genre {GenreID = 5, Name = "Simulation"},
+            new Genre {GenreID = 6, Name = "Sports"},
+            new Genre {GenreID = 7, Name = "Racing"},
+            new Genre {GenreID = 8, Name = "First-person shooter"}
            
             };
             return genres;
@@ -28,14 +28,14 @@ namespace MVCgame.Models
 
         public List<Platform> GetPlatforms()
         {
-            var platform = new List<Platform>()
+            var platform = new List<Platform>
             {
                 new Platform {PlatformID = 1, Name = "Nintendo Switch"},
                 new Platform {PlatformID = 2, Name = "Windows"},
                 new Platform {PlatformID = 3, Name = "Mac"},
                 new Platform {PlatformID = 4, Name = "Xbox"},
                 new Platform {PlatformID = 5, Name = "Playstation 4"},
-                new Platform {PlatformID = 6, Name = "Linux"},
+                new Platform {PlatformID = 6, Name = "Linux"}
             };
             return platform;
 
@@ -46,7 +46,7 @@ namespace MVCgame.Models
             var genres = GetGenres();
             var platform = GetPlatforms();
 
-            List<Game> games = new List<Game>()
+            List<Game> games = new List<Game>
             {
 
                 new Game{GameID = 1, Name = "The Escapists 2", ReleaseDate = 11, ReleaseMonth = "January",
