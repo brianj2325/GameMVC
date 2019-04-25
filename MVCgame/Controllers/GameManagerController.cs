@@ -9,12 +9,11 @@ namespace MVCgame.Controllers
 {
     public class GameManagerController : Controller
     {
-        // GET: StoreManager
+        // GET: GameManager - Like Gamestop
         public ActionResult Index()
         {
             TempData tempData = new TempData();
             var model = tempData.GetGames();
-
             return View(model);
         }
 
@@ -26,13 +25,13 @@ namespace MVCgame.Controllers
         }
 
         //
-        // GET: /StoreManager/Edit/5
+        // GET: /StoreManager/Edit/39
         public ActionResult Edit(int id)
         {
             TempData tempData = new TempData();
             var game = tempData.GetGames().Where(x => x.GameID == id).FirstOrDefault();
-            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreId", "Name", game.GenreId);
-            ViewBag.Platform = new SelectList(tempData.GetPlatforms(), "ArtistId", "Name", game.GameID);
+            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreId", "Name", game.GameID);
+            ViewBag.Platform = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name", game.GameID);
             return View(game);
         }
 
@@ -48,8 +47,8 @@ namespace MVCgame.Controllers
         public ActionResult Create()
         {
             TempData tempData = new TempData();
-            ViewBag.GenreId = new SelectList(TempData.GetGenres(), "GenreId", "Name");
-            ViewBag.ArtistId = new SelectList(tem.GetArtists(), "ArtistId", "Name");
+            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreID", "Name");
+            ViewBag.PlatformID = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name");
             return View();
         }
     }

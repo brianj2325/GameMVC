@@ -131,6 +131,9 @@
     <Content Include="Views\Game\Index.cshtml" />
     <Content Include="Views\Game\Browse.cshtml" />
     <Content Include="Views\Game\Details.cshtml" />
+    <Content Include="Views\GameManager\Detail.cshtml" />
+    <Content Include="Views\GameManager\Edit.cshtml" />
+    <Content Include="Views\GameManager\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,7 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\GameManager\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

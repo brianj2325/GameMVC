@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 using MVCgame.Models;
+using System.Web.Mvc;
 
 namespace MVCgame.Controllers
 {
@@ -33,8 +33,6 @@ namespace MVCgame.Controllers
             TempData tempData = new TempData();
             var game = tempData.GetGames().Where(x => x.GameID == id).FirstOrDefault();
             return View(game);
-
-            //return id.ToString();
         }
     }
 }
