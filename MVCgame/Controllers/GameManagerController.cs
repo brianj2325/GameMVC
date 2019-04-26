@@ -35,12 +35,12 @@ namespace MVCgame.Controllers
         //    return View(game);
         //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Game game)
-        {
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(Game game)
+        //{
+        //    return RedirectToAction("Index");
+        //}
 
         //
         // GET: /StoreManager/Create

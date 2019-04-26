@@ -43,5 +43,12 @@ namespace MVCgame.Controllers
             ViewBag.Platform = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name", game.GameID);
             return View(game);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Game game)
+        {
+            return RedirectToAction("Index");
+        }
     }
 }
