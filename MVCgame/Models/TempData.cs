@@ -30,12 +30,12 @@ namespace MVCgame.Models
         {
             var platform = new List<Platform>()
             {
-                new Platform {PlatformID = 1, Name = "Nintendo Switch"},
-                new Platform {PlatformID = 2, Name = "Windows"},
-                new Platform {PlatformID = 3, Name = "Mac"},
-                new Platform {PlatformID = 4, Name = "Xbox"},
-                new Platform {PlatformID = 5, Name = "Playstation 4"},
-                new Platform {PlatformID = 6, Name = "Linux"},
+                new Platform {PlatformID = 1, System = "Nintendo Switch"},
+                new Platform {PlatformID = 2, System = "Windows"},
+                new Platform {PlatformID = 3, System = "Mac"},
+                new Platform {PlatformID = 4, System = "Xbox"},
+                new Platform {PlatformID = 5, System = "Playstation 4"},
+                new Platform {PlatformID = 6, System = "Linux"},
             };
             return platform;
 
@@ -49,24 +49,24 @@ namespace MVCgame.Models
             List<Game> games = new List<Game>
             {
 
-                new Game{GameID = 1, Name = "The Escapists 2", ReleaseDate = 11, ReleaseMonth = "January",
-                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.Name == "Nintendo Switch")},
-                new Game{GameID = 2, Name = "Shadow of the Colossus", ReleaseDate = 6, ReleaseMonth = "February",
-                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.Name == "Playstation 4")},
-                new Game{GameID = 3, Name = "Rust", ReleaseDate = 6, ReleaseMonth = "February",
-                    Genre = genres.Single(g => g.Name == "Adventure"), Platforms = platform.Single(p => p.Name == "Windows")},
-                new Game{GameID = 4, Name = "God of War", ReleaseDate = 20, ReleaseMonth = "April",
-                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.Name == "Playstation 4")},
-                new Game{GameID = 5, Name = "Conan Exiles", ReleaseDate = 8, ReleaseMonth = "May",
-                    Genre = genres.Single(g => g.Name =="Action"), Platforms = platform.Single(p => p.Name == "Windows")},
-                new Game{GameID = 6, Name = "The Crew 2", ReleaseDate = 29, ReleaseMonth = "June",
-                    Genre = genres.Single(g => g.Name == "Racing"), Platforms = platform.Single(p => p.Name == "Windows")},
-                new Game{GameID = 7, Name = "No Man's Sky", ReleaseDate = 24, ReleaseMonth = "July",
-                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.Name == "Xbox")},
-                new Game{GameID = 8, Name = "Divinity: Original Sin II", ReleaseDate = 31, ReleaseMonth = "August",
-                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.Name == "Playstation 4")},
-                new Game{GameID = 0, Name = "Undertale", ReleaseDate = 18, ReleaseMonth = "September",
-                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.Name == "Nintendo Switch")},
+                new Game{GameID = 1, Title = "The Escapists 2", ReleaseDate = 11, ReleaseMonth = "January",
+                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.System == "Nintendo Switch")},
+                new Game{GameID = 2, Title = "Shadow of the Colossus", ReleaseDate = 6, ReleaseMonth = "February",
+                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.System == "Playstation 4")},
+                new Game{GameID = 3, Title = "Rust", ReleaseDate = 6, ReleaseMonth = "February",
+                    Genre = genres.Single(g => g.Name == "Adventure"), Platforms = platform.Single(p => p.System == "Windows")},
+                new Game{GameID = 4, Title = "God of War", ReleaseDate = 20, ReleaseMonth = "April",
+                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.System == "Playstation 4")},
+                new Game{GameID = 5, Title = "Conan Exiles", ReleaseDate = 8, ReleaseMonth = "May",
+                    Genre = genres.Single(g => g.Name =="Action"), Platforms = platform.Single(p => p.System == "Windows")},
+                new Game{GameID = 6, Title = "The Crew 2", ReleaseDate = 29, ReleaseMonth = "June",
+                    Genre = genres.Single(g => g.Name == "Racing"), Platforms = platform.Single(p => p.System == "Windows")},
+                new Game{GameID = 7, Title = "No Man's Sky", ReleaseDate = 24, ReleaseMonth = "July",
+                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.System == "Xbox")},
+                new Game{GameID = 8, Title = "Divinity: Original Sin II", ReleaseDate = 31, ReleaseMonth = "August",
+                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.System == "Playstation 4")},
+                new Game{GameID = 0, Title = "Undertale", ReleaseDate = 18, ReleaseMonth = "September",
+                    Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.System == "Nintendo Switch")},
             };
             return games;
         }

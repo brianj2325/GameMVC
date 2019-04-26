@@ -8,6 +8,6 @@ namespace MVCgame.Models
     public class Platform
     {
         public int PlatformID { get; set;}
-        public string Name { get; set; }
+        public string System { get; set; }
     }
 }
