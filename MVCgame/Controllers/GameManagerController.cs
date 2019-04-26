@@ -64,8 +64,8 @@ namespace MVCgame.Controllers
         public ActionResult Create()
         {
             TempData tempData = new TempData();
-            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreID", "Name");
-            ViewBag.PlatformID = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name");
+            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "Genre", "Name");
+            ViewBag.PlatformID = new SelectList(tempData.GetPlatforms(), "Platform", "Name");
             return View();
         }
     }

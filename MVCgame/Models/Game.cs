@@ -16,7 +16,7 @@ namespace MVCgame.Models
         public int GameID { get; set; }
         [DisplayName("Genre")]
         public int GenreID { get; set; }
-        [DisplayName("Platform")]
+        [DisplayName ("Platform")]
         public int PlatformID { get; set; }
         [Required(ErrorMessage = "A Game title is required.")]
         public string Name { get; set; }
