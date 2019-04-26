@@ -52,7 +52,7 @@ namespace MVCgame.Models
                 new Game{GameID = 1, Name = "The Escapists 2", ReleaseDate = 11, ReleaseMonth = "January",
                     Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.Name == "Nintendo Switch")},
                 new Game{GameID = 2, Name = "Shadow of the Colossus", ReleaseDate = 6, ReleaseMonth = "February",
-                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.Name == "Playstion 4")},
+                    Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.Name == "Playstation 4")},
                 new Game{GameID = 3, Name = "Rust", ReleaseDate = 6, ReleaseMonth = "February",
                     Genre = genres.Single(g => g.Name == "Adventure"), Platforms = platform.Single(p => p.Name == "Windows")},
                 new Game{GameID = 4, Name = "God of War", ReleaseDate = 20, ReleaseMonth = "April",

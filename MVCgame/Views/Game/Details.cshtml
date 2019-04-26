@@ -6,11 +6,14 @@
 <h2>Details for @Model.Name</h2>
 <p>
     <ul>
-        <li>Genre: @Model.Genre</li>
+        <li>Genre: @Model.Genre.Name</li>
         <li>Release Date: @Model.ReleaseMonth @Model.ReleaseDate</li>
-        <li>Platform: @Model.Platforms</li>
+        <li>Platform: @Model.Platforms.Name</li>
+        <li>GameID: @Model.GameID</li>
         
     </ul>
 </p>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.GameID } )
 
 

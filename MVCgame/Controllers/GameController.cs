@@ -34,5 +34,14 @@ namespace MVCgame.Controllers
             var game = tempData.GetGames().Where(x => x.GameID == id).FirstOrDefault();
             return View(game);
         }
+
+        public ActionResult Edit(int id)
+        {
+            TempData tempData = new TempData();
+            var game = tempData.GetGames().Where(x => x.GameID == id).FirstOrDefault();
+            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreId", "Name", game.GameID);
+            ViewBag.Platform = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name", game.GameID);
+            return View(game);
+        }
     }
 }
