@@ -8,7 +8,7 @@
    @foreach (var game in Model.Games)
    {
        <li>
-           @Html.ActionLink(game.Name, "Details", new { id = game.GameID})
+           @Html.ActionLink(game.Title, "Details", new { id = game.GameID})
        </li>
    }
 </ul>
