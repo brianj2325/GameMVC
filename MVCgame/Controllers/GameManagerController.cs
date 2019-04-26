@@ -24,6 +24,17 @@ namespace MVCgame.Controllers
             return View(game);
         }
 
+        public ActionResult Delete(int id)
+        {
+            
+            TempData tempData = new TempData();
+            var game = tempData.GetGames().Where(x => x.GameID == id).FirstOrDefault();
+            ViewBag.GenreId = new SelectList(tempData.GetGenres(), "GenreId", "Name", game.GameID);
+            ViewBag.Platform = new SelectList(tempData.GetPlatforms(), "PlatformID", "Name", game.GameID);
+            return View(game);
+            
+        }
+
         //
         // GET: /StoreManager/Edit/39
         public ActionResult Edit(int id)
@@ -42,6 +53,12 @@ namespace MVCgame.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Game game)
+        {
+            return RedirectToAction("Index");
+        }
         //
         // GET: /StoreManager/Create
         public ActionResult Create()
