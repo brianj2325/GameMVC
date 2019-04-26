@@ -161,7 +161,7 @@
     <Content Include="Views\Game\Browse.cshtml" />
     <Content Include="Views\Game\Details.cshtml" />
     <Content Include="Views\GameManager\Detail.cshtml" />
-    <Content Include="Views\GameManager\Edit.cshtml" />
+    <Content Include="Views\Game\Edit.cshtml" />
     <Content Include="Views\GameManager\Create.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
