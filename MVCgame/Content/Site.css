@@ -16,3 +16,13 @@ textarea {
     max-width: 280px;
 }
 
+/*Used for header*/
+ul {
+    list-style: none;
+}
+.li-align {
+    display: inline;
+}
+
+
+
