@@ -12,6 +12,7 @@ namespace MVCgame.Controllers
         // GET: Game
         public ActionResult Index()
         {
+            
             TempData tempData = new TempData();
             var genres = tempData.GetGenres();
 

@@ -1,7 +1,50 @@
-﻿
+﻿@using MVCgame
+@model IEnumerable<MVCgame.Models.Game>
 @{
     ViewBag.Title = "Index";
 }
+<h2>All Games</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Genre
+        </th>
+        <th>
+            Platform
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Release Date
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Platforms.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseMonth) 
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
 
-<h2>Index</h2>
-
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |
+                @Html.ActionLink("Details", "Detail", new { id = item.GameID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+            </td>
+        </tr>
+    }
+</table>

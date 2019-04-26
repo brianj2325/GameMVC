@@ -9,8 +9,11 @@
         <li>Genre: @Model.Genre.Name</li>
         <li>Release Date: @Model.ReleaseMonth @Model.ReleaseDate</li>
         <li>Platform: @Model.Platforms.Name</li>
-        
+
     </ul>
+    @Html.ActionLink("Edit", "Edit", "GameManager", new { id = Model.GameID }, null) | 
+    @Html.ActionLink("Delete", "Delete", "GameManager", new { id = Model.GameID }, null) | 
+    @Html.ActionLink("Back", "Browse",new { genre = Model.Genre.Name})
 </p>
 
 
