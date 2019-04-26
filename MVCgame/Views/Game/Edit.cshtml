@@ -20,6 +20,7 @@
             @Html.LabelFor(model => model.GenreID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("GenreID", String.Empty)
+                @Html.EditorFor(model => model.GenreID, "", new { @class = "control-label col-md-2" } )
                 @Html.ValidationMessageFor(model => model.GenreID, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -27,7 +28,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PlatformID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("PlatformID", String.Empty)
+                @*@Html.DropDownList("PlatformID", String.Empty)*@ @*i have no idea why, but this line breaks the view. it sure looks identical to the GenreID dropdown above...*@
+                @Html.EditorFor(model => model.PlatformID, "", new { @class = "control-lable col-md-2"})
                 @Html.ValidationMessageFor(model => model.PlatformID, "", new { @class = "text-danger" })
             </div>
         </div>
