@@ -65,8 +65,18 @@ namespace MVCgame.Models
                     Genre = genres.Single(g => g.Name == "Action"), Platforms = platform.Single(p => p.System == "Xbox")},
                 new Game{GameID = 8, Title = "Divinity: Original Sin II", ReleaseDate = 31, ReleaseMonth = "August",
                     Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.System == "Playstation 4")},
-                new Game{GameID = 0, Title = "Undertale", ReleaseDate = 18, ReleaseMonth = "September",
+                new Game{GameID = 9, Title = "Surving Mars", ReleaseDate = 15, ReleaseMonth = "March",
+                    Genre = genres.Single(g => g.Name == "Simulation"), Platforms = platform.Single(p => p.System == "Nintendo Switch")},
+                new Game{GameID = 10, Title = "Detective Pikachu", ReleaseDate = 23, ReleaseMonth = "March",
+                    Genre = genres.Single(g => g.Name == "Adventure"), Platforms = platform.Single(p => p.System == "Nintendo Switch")},
+                new Game{GameID = 11, Title = "South Park: The Fractured but Whole", ReleaseDate = 24, ReleaseMonth = "April",
                     Genre = genres.Single(g => g.Name == "Role-Playing"), Platforms = platform.Single(p => p.System == "Nintendo Switch")},
+                new Game{GameID = 12, Title = "Total War Saga: Thrones of Britannia ", ReleaseDate = 3, ReleaseMonth = "May",
+                    Genre = genres.Single(g => g.Name == "Strategy"), Platforms = platform.Single(p => p.System == "Windows")},
+                new Game{GameID = 13, Title = "Insurgency: Sandstorm", ReleaseDate = 12, ReleaseMonth = "December",
+                    Genre = genres.Single(g => g.Name == "First-person shooter"), Platforms = platform.Single(p => p.System == "Windows")},
+                new Game{GameID = 14, Title = "Mutant Football League: Dynasty Edition", ReleaseDate = 30, ReleaseMonth = "October",
+                    Genre = genres.Single(g => g.Name == "Sports"), Platforms = platform.Single(p => p.System == "Windows")},
             };
             return games;
         }
